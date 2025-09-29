@@ -42,3 +42,5 @@ process.on("SIGINT", async () => {
 // app.listen(PORT, () => {
 //     console.log(`server is running at port ${PORT}`);
 // });
+
+export default app;

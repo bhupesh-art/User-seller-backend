@@ -17,13 +17,13 @@ const PORT = process.env.PORT || 5000;
 const DATABASE_URL = process.env.DIRECT_URL;
 const prisma = new PrismaClient();
 
-app.get("/", (req, res) => {
+app.get("/api", (req, res) => {
     res.send('app is running');
 })
 
-app.use("/category", CategoryRouter);
-app.use("/product", ProductRouter)
-app.post("/test", (req, res) => {
+app.use("api/category", CategoryRouter);
+app.use("api/product", ProductRouter)
+app.post("api/test", (req, res) => {
     let data = req.body;
     if (data === undefined) {
         // data = JSON.stringify(data);

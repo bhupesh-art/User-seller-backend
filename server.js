@@ -17,7 +17,7 @@ const PORT = process.env.PORT || 5000;
 const DATABASE_URL = process.env.DIRECT_URL;
 const prisma = new PrismaClient();
 
-app.get("/api", (req, res) => {
+app.get("/", (req, res) => {
     res.send('app is running');
 })
 

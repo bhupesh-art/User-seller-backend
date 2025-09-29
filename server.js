@@ -21,9 +21,9 @@ app.get("/", (req, res) => {
     res.send('app is running');
 })
 
-app.use("api/category", CategoryRouter);
-app.use("api/product", ProductRouter)
-app.post("api/test", (req, res) => {
+app.use("/api/category", CategoryRouter);
+app.use("/api/product", ProductRouter)
+app.post("/api/test", (req, res) => {
     let data = req.body;
     if (data === undefined) {
         // data = JSON.stringify(data);

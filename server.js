@@ -14,7 +14,7 @@ app.use(cors(
 app.use(express.json());
 
 const PORT = process.env.PORT || 5000;
-const DATABASE_URL = process.env.DIRECT_URL;
+const DATABASE_URL = process.env.DATABASE_URL;
 const prisma = new PrismaClient();
 
 app.get("/", (req, res) => {
